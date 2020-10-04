@@ -3,6 +3,8 @@ const { graphqlHTTP } = require("express-graphql");
 const schema = require("./schema/schema");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const PORT = process.env.PORT || 4000;
+
 // DB access
 
 const mongoDB =
@@ -31,6 +33,6 @@ app.use(
 
 //    listining for the request
 
-app.listen(4000, () => {
+app.listen(PORT, () => {
   console.log("listening for requests");
 });
